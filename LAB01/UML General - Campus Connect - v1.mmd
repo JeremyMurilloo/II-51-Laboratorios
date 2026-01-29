@@ -34,6 +34,15 @@ class Profesor {
   +bool Activo
 }
 
+class Periodo {
+  + int IdPeriodo
+  + string Codigo
+  + string Nombre
+  + date FechaInicio
+  + date FechaFin
+  + bool Activo
+}
+
 Estudiante "1" --> "0..*" Matricula : realiza
 Curso "1" --> "0..*" Matricula : recibe
 Profesor "1" --> "0..*" Curso : imparte
