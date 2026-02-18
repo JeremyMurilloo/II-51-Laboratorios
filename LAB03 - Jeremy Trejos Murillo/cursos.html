@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 id="main-title" class="title">Plataforma Educativa</h1>
+    <h2 class="title">Universidad Central</h2>
+
+    <!-- Menú -->
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li><a class="nav-item" href="index.html">Inicio</a></li>
+        <li><a class="nav-item" href="cursos.html">Cursos</a></li>
+        <li><a class="nav-item" href="contacto.html">Contacto</a></li>
+        <li><a class="nav-item" href="#">Ayuda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- FORMULARIO DE CURSOS -->
+  <main>
+    <section>
+      <form action="#" method="post">
+
+        <legend class="cursos-legend">Cursos</legend>
+
+        <div class="form-cursos">
+
+          <!-- Nombre del curso -->
+          <label for="curso">Nombre del curso:</label>
+          <input 
+            type="text" 
+            id="curso" 
+            name="curso" 
+            placeholder="Ej: Programación Web" 
+            required
+          >
+
+          <!-- Precio del curso -->
+          <label for="precio">Precio del curso:</label>
+          <input 
+            type="number" 
+            id="precio" 
+            name="precio" 
+            placeholder="₡0000" 
+            min="0"
+            required
+          >
+
+          <!-- Botón -->
+          <button class="submit-button" type="submit">Agregar</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+
+  <footer style="text-align:center; margin-top:20px;">
+    <p>&copy; 2023 Plataforma Educativa Universidad Central</p>
+  </footer>
+
+</body>
+</html>

@@ -1,61 +1,203 @@
-body{
-      background-color: #beb63cd0;
-    }
-    .form-group label {
-      display: block;
-      margin-left: 5px;
-      font-weight: bold;
-    }
+body {
+  background-color: #fdf17f;
+}
 
-    .form-input {
-      width: 100%;
-      padding: 10px 0;
-      border: 1px solid black;
-      border-radius: 4px;
-    }
+/*                         ===== Formularios generales =====                          */
+.form-group label {
+  display: block;
+  margin-left: 5px;
+  font-weight: bold;
+}
 
-    .submit-button {
-      padding: 10px 50px;
-      border-radius: 15px;
-      transition: background-color 0.1s ease;
-    }
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
 
-    .submit-button:hover {
-      background-color: #1e3d6f;
-      /* Un azul más oscuro al pasar el mouse */
-    }
+/* Botón */
+.submit-button {
+  padding: 10px 50px;
+  border-radius: 15px;
+  transition: background-color 0.1s ease;
+}
 
-    .title{
-    text-align: center;
-    color: whitesmoke;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;  
-    }
+.submit-button:hover {
+  background-color: #1e3d6f;
+}
 
-    #main-title{
-    font-size: 2.5em;
-    margin-top: 1em;
-    margin-bottom: 0.2em;
 
-    }
+/*                     ===== Títulos generales =====                   */
+.title {
+  text-align: center;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+}
 
-    .nav-list{
-    list-style-type: none;
-    padding: 0;
-    display: flex;  /*alinea horizontalmente*/
-    justify-content: center;    /*da aliniacion al contenido*/
-    }
+#main-title {
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
 
-    .nav-item{
-    margin: 0 15px;
-    background-color: #3f69b9;
-    padding: 10px 20px;
-    border-radius: 10px;    
-    }
 
-    .nav-menu a{
-    color: whitesmoke;
-    text-decoration: none;
-  }
+/*                       ===== Menú de navegación =====                  */
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+  background-color: #3f69b9;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.nav-menu a,
+.nav-item {
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: #3f69b9;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color .15s ease, transform .05s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus,
+.nav-item:hover,
+.nav-item:focus {
+  background-color: #3458a0;
+  outline: none;
+}
+
+.nav-menu a:active,
+.nav-item:active {
+  transform: translateY(1px);
+}
+
+
+/*                                ===== Subpágina CURSOS =====                         */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+
+/* Título / LEGEND del bloque */
+.cursos-legend {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 10px 0;
+  margin: 8px 0 12px;
+  color: #0e0d0d;
+  border-bottom: 1px solid #000000;
+}
+
+/* ===== Formulario de cursos ===== */
+.form-cursos {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background: #3f69b9;
+  box-sizing: border-box;
+}
+
+.form-cursos label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  grid-column: 1 / -1;
+  color: whitesmoke;
+}
+
+.form-cursos input[type="text"],
+.form-cursos input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #1e3d6f;
+  color: whitesmoke;
+}
+
+.form-cursos button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #1e3d6f;
+  color: whitesmoke;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/*                                ===== Subpágina CONTACTO =====                         */
+.contacto-legend {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: black;                  
+  margin: 6px 0 12px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  padding-bottom: 6px;
+}
+
+.form-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background: #3f69b9;
+  box-sizing: border-box; 
+}
+
+.form-contacto label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  grid-column: 1 / -1;
+  color: whitesmoke; 
+}
+
+#mensaje {
+  grid-column: 1 / -1;
+  height: 120px;
+  resize: none;
+}
+
+.form-contacto input[type="text"],
+.form-contacto input[type="email"]{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #1e3d6f;
+  color: whitesmoke;
+}
+
+.form-contacto button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #1e3d6f;
+  color: whitesmoke;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+
 
 
