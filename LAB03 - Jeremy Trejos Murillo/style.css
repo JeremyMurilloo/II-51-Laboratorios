@@ -5,12 +5,12 @@ body {
 /*                         ===== Formularios generales =====                          */
 .form-group label {
   display: block;
-  margin-left: 5px;
+  margin-left: 10px;
   font-weight: bold;
 }
 
 .form-input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   border: 1px solid black;
   border-radius: 4px;
@@ -20,13 +20,17 @@ body {
 .submit-button {
   padding: 10px 50px;
   border-radius: 15px;
-  transition: background-color 0.1s ease;
+  color: whitesmoke;
+  background-color: #3f69b9;
+  width: 100%;
 }
 
-.submit-button:hover {
-  background-color: #1e3d6f;
+footer, header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffee59;
+  color: black;
 }
-
 
 /*                     ===== Títulos generales =====                   */
 .title {
@@ -42,6 +46,13 @@ body {
   margin-bottom: 0.2em;
 }
 
+/*                     ===== Bloque de video =====                   */
+
+#video-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
 
 /*                       ===== Menú de navegación =====                  */
 .nav-list {
