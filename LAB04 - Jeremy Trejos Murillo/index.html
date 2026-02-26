@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lab05 - Bootstrap 5.3</title>
+
+  <!-- Bootstrap 5.3 CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <style>
+    /* Encabezado animado, similar a "An animated element" */
+    .title-animated {
+      animation: float 3s ease-in-out infinite; /* animación suave */
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-6px); }
+    }
+
+    /* Estilo tenue para cajas de demo */
+    .demo-box {
+      background: #e7f0ff;              /* azul claro */
+      border: 1px solid #9ec1ff;        /* borde azul */
+      padding: .5rem;                    /* relleno */
+      text-align: center;                /* centro */
+      font-size: .9rem;                  /* tamaño */
+    }
+
+    /* Banda gris como en la captura entre secciones */
+    .band {
+      background: #9e9e9e;               /* gris */
+      height: 56px;                      /* alto */
+    }
+
+    /* Fina línea de tabla superior */
+    .top-grid .cell {
+      border: 1px solid #e0e0e0;         /* bordes claros */
+      padding: .25rem;                   /* espacio */
+      font-size: .9rem;                  /* texto */
+      text-align: center;                /* centro */
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- Encabezado animado centrado -->
+  <header class="py-3 text-center">
+    <h1 class="title-animated fw-semibold">An animated element</h1>
+  </header>
+
+  <!-- “Tabla” superior de columnas de ejemplo -->
+  <section class="container top-grid mb-4">
+    <!-- fila 1: 4 columnas iguales (col-3) -->
+    <div class="row g-1 mb-1">
+      <div class="col-3"><div class="cell">Column-2</div></div>
+      <div class="col-3"><div class="cell">Column-6</div></div>
+      <div class="col-3"><div class="cell">Column-2</div></div>
+      <div class="col-3"><div class="cell">Column-2</div></div>
+    </div>
+    <!-- fila 2: 3 columnas -->
+    <div class="row g-1 mb-1">
+      <div class="col"><div class="cell">Column</div></div>
+      <div class="col"><div class="cell">Column</div></div>
+      <div class="col"><div class="cell">Column</div></div>
+    </div>
+  </section>
+
+  <!-- Sección: título Lab05 con container-fluid -->
+  <section class="container my-3">
+    <div class="p-3 bg-white border">
+      <h2 class="h3 mb-1">Lab05</h2>         <!-- título -->
+      <div class="text-success small">container-fluid</div> <!-- subtítulo -->
+      <p class="mt-3 mb-0 small">One of three columns</p>   <!-- línea de ejemplo -->
+    </div>
+  </section>
+
+  <!-- Banda gris separadora como en la imagen -->
+  <div class="band my-4"></div>
+
+  <!-- Segunda sección con grillas y “Responsive” -->
+  <section class="container">
+    <!-- Cabecera igual a la anterior -->
+    <div class="p-3 bg-white border mb-3">
+      <h2 class="h3 mb-1">Lab05</h2>                           <!-- título -->
+      <div class="text-success small">container-fluid</div>     <!-- subtítulo -->
+    </div>
+
+    <!-- Fila: "One of three columns" repetido -->
+    <div class="row g-2 mb-2">
+      <div class="col"><div class="demo-box">One of three columns</div></div>
+      <div class="col"><div class="demo-box">One of three columns</div></div>
+      <div class="col"><div class="demo-box">One of three columns</div></div>
+    </div>
+
+    <!-- Fila: Responsive / col-sm-4 -->
+    <div class="row g-2 mb-2">
+      <div class="col-sm-8"><div class="demo-box">Responsive</div></div>
+      <div class="col-sm-4"><div class="demo-box">col-sm-4</div></div>
+    </div>
+
+    <!-- Fila: col-sm-4 + col-sm-2 (simulando la captura) -->
+    <div class="row g-2 mb-2">
+      <div class="col-sm-4"><div class="demo-box">col-sm-4</div></div>
+      <div class="col-sm-2"><div class="demo-box">col-sm-2</div></div>
+      <div class="col-sm"><div class="demo-box">col-sm</div></div>
+    </div>
+
+    <!-- Fila: tres "col-sm" iguales -->
+    <div class="row g-2 mb-4">
+      <div class="col-sm"><div class="demo-box">col-sm</div></div>
+      <div class="col-sm"><div class="demo-box">col-sm</div></div>
+      <div class="col-sm"><div class="demo-box">col-sm</div></div>
+    </div>
+
+    <!-- Formulario: Nombre, Email, Contraseña -->
+    <form class="bg-white border rounded p-3">
+      <!-- Etiquetas arriba como en Bootstrap -->
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label for="nombre" class="form-label">Nombre</label> <!-- label -->
+          <input type="text" class="form-control" id="nombre" placeholder="Enter your full name." />
+          <div class="form-text">Enter your full name.</div>    <!-- ayuda -->
+        </div>
+        <div class="col-md-4">
+          <label for="email" class="form-label">Email</label>    <!-- label -->
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+          <div class="form-text">We’ll never share your email with anyone else.</div>
+        </div>
+        <div class="col-md-4">
+          <label for="pass" class="form-label">Contraseña</label> <!-- label -->
+          <input type="password" class="form-control" id="pass" placeholder="••••••••" />
+        </div>
+      </div>
+
+      <!-- Botón Submit -->
+      <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Submit</button> <!-- botón -->
